@@ -1,20 +1,16 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
-import App from './pages/app'
-import store from 'store'
-import router from './router'
-import 'common/index.styl'
+import Vonic from 'vonic/src/index.js'
 
-Vue.use(ElementUI);
-Vue.config.productionTip = false
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router,
-  store,
-  components: { App },
-  template: '<App/>'
+// Page Components
+import Index from './components/Index.vue'
+import About from './components/About.vue'
+
+// Routes
+const routes = [
+  { path: '/', component: Index },
+  { path: '/about', component: About }
+]
+
+Vue.use(Vonic.app, {
+  routes: routes
 })

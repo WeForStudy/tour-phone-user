@@ -42,17 +42,16 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
-      'vue$': 'vue/dist/vue.esm.js',
-      '@': resolve('src'),
-      'services': resolve('src/services'),
-      'pages': resolve('src/pages'),
-      'helper': resolve('src/helper'),
-      'storage': resolve('src/storage'),
-      'store': resolve('src/store'),      
-      'assets': resolve('src/assets'),
-      'common': resolve('src/common'),
-      'tool': resolve('src/tool'),
-      'enum': resolve('src/enum'),
+      'vue$': 'vue/dist/vue.common.js',
+      'services': path.resolve('src/services'),
+      'pages': path.resolve('src/pages'),
+      'helper': path.resolve('src/helper'),
+      'storage': path.resolve('src/storage'),
+      'store': path.resolve('src/store'),      
+      'assets': path.resolve('src/assets'),
+      'common': path.resolve('src/common'),
+      'tool': path.resolve('src/tool'),
+      'enum': path.resolve('src/enum'),
     }
   },
   devServer: {

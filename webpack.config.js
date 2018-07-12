@@ -41,7 +41,16 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue'],
     alias: {
-      'vue$': 'vue/dist/vue.common.js'
+      'vue$': 'vue/dist/vue.common.js',
+      'services': path.resolve('src/services'),
+      'pages': path.resolve('src/pages'),
+      'helper': path.resolve('src/helper'),
+      'storage': path.resolve('src/storage'),
+      'store': path.resolve('src/store'),      
+      'assets': path.resolve('src/assets'),
+      'common': path.resolve('src/common'),
+      'tool': path.resolve('src/tool'),
+      'enum': path.resolve('src/enum'),
     }
   },
   devServer: {

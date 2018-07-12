@@ -1,31 +1,14 @@
 <template>
-    <el-container class="home--wrapper both--100 flex">
-       <el-aside :class="'slide collapse--'+slide.isCollapse" :style="sStyle">
-          <Aside />
-      </el-aside>
-        <el-container class="flex--1">
-          <el-header class="header flex">
-            <div class="icon--wrapper position--a" @click="collapse">
-              <i :class="btnIcon"></i>
-            </div>
-            <!-- <div>{{login.admin.name}}</div> -->
-          </el-header>
-          <el-main class="main flex">
-            <div class="router--wrapper flex--1 box--content">
-              <router-view></router-view>
-            </div>
-          </el-main>
-        </el-container>
-    </el-container>
+    <div>
+      IM home
+    </div>
 </template>
 
 <script>
-import Aside from 'pages/aside'
 import { mapActions, mapState } from 'vuex'
 export default {
   name: 'Home',
   components: {
-    Aside,
   },
   methods: {
     ...mapActions([
